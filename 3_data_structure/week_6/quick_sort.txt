@@ -1,0 +1,18 @@
+quickSort(array a, int low, int high)
+    if(low < high) 
+        pivot = partition(a, low, high)
+        quicksort(a, low, pivot)
+        quicksort(a, pivot + 1, high)
+
+partition(array a, int low, int high)
+    pivot = a[high]
+    leftflag = low - 1
+
+    for i = low + 1 to high
+        if (a[i] <= pivot)
+            swap (a[i], a[leftflag])
+
+    swap(a[leftflag + 1], a[high])
+    return leftflag + 1
+
+    

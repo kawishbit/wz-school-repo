@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Week 3 Practice</title>
+    <style type="text/css">
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            position: relative;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            background: #fff;
+        }
+
+        table {
+            margin: 40px auto;
+            min-width: 50%;
+            color: #242424;
+            background: white;
+            border: 1px solid rgb(44, 44, 44);
+            font-size: 12pt;
+            border-collapse: collapse;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        table thead th,
+        table tfoot th {
+            color: #3c3c3c;
+            background: rgb(245 245 245);
+        }
+
+        table caption {
+            padding: .5em;
+        }
+
+        table th,
+        table td {
+            padding: .5em;
+            border: 1px solid lightgrey;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="mainTable">
+    </table>
+
+    <script type="text/javascript">
+        let tableHeader = ["Test 1", "Test 2", "Test 3"];
+        let tableData = [
+            ["Data 1", "Data 2", "Data 3"],
+            ["Data 1", "Data 2", "Data 3"],
+            ["Data 1", "Data 2", "Data 3"],
+            ["Data 1", "Data 2", "Data 3"],
+            ["Data 1", "Data 2", "Data 3"],
+            ["Data 1", "Data 2", "Data 3"],
+            ["Data 1", "Data 2", "Data 3"],
+            ["Data 1", "Data 2", "Data 3"],
+            ["Data 1", "Data 2", "Data 3"],
+            ["Data 1", "Data 2", "Data 3"],
+            ["Data 1", "Data 2", "Data 3"],
+            ["Data 1", "Data 2", "Data 3"],
+            ["Data 1", "Data 2", "Data 3"],
+            ["Data 1", "Data 2", "Data 3"],
+            ["Data 1", "Data 2", "Data 3"],
+        ];
+
+        generateTableById("mainTable", tableHeader, tableData);
+
+        function generateTableById(id, tableHeader, tableData) {
+
+            let table = document.getElementById(id);
+            let thead = document.createElement("thead");
+            let tbody = document.createElement("tbody");
+
+            table.appendChild(thead);
+            table.appendChild(tbody);
+
+            let theadTr = document.createElement("tr");
+            thead.appendChild(theadTr);
+
+            for (const thItem of tableHeader) {
+                let th = document.createElement("th");
+                th.innerHTML = thItem;
+                theadTr.appendChild(th);
+            }
+
+
+            for (const trItems of tableData) {
+                let tbodyTr = document.createElement("tr");
+                tbody.appendChild(tbodyTr);
+                for (const tdItem of trItems) {
+                    let td = document.createElement("td");
+                    td.innerHTML = tdItem;
+                    tbodyTr.appendChild(td);
+                }
+            }
+        }
+    </script>
+</body>
+
+
+</html>

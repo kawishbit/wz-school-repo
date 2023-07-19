@@ -1,0 +1,49 @@
+enum order = asc , desc
+function mergeSort(array a, order arrayOrder ) 
+    if(a.length == 1) 
+        return a
+    
+    firstArray = get a from a[0] ... a[n/2]
+    secondArray = get a a[n/2+1] ... a[n]
+
+    firstArray = mergeSort(firstArray)
+    secondArray = mergeSort(secondArray)
+
+    return mergeArrays(firstArray, secondArray, arrayOrder )
+endfunction
+
+function mergeArray(array firstArray, array secondArray,order arrayOrder)
+    array placeholderArray
+    bool comparison
+    switch (arrayOrder)
+        case asc
+            c = firstArray[0] > secondArray[0]
+        case desc
+            c = firstArray[0] < secondArray[0]
+    
+    // jika program masuk kedalam scope while ini, maka firstArray dan secondArray akan di handle sampai habis element didalamnya
+    while( firstArray and secondArray have elements ) 
+        if( c ) 
+            // akan mengeluarkan element pertama dari secondArray dan menambahkannya ke belakang placeholderArray
+            placeholderArray.push ( secondArray.shift ) 
+        else 
+            // akan mengeluarkan element pertama dari firstArray dan menambahkannya ke belakang placeholderArray
+            placeholderArray.push ( firstArray.shift ) 
+    endwhile
+
+    //akan jalan jika while di atas tidak terpenuhi, jika while di atas terpenuhi, maka firstArray dan secondArray akan menjadi kosong 
+    while ( firstArray has elements )
+        // akan mengeluarkan element pertama dari firstArray dan menambahkannya ke belakang placeholderArray
+        placeholderArray.push ( firstArray.shift ) 
+    endwhile
+
+    while ( secondArray has elements )
+        // akan mengeluarkan element pertama dari secondArray dan menambahkannya ke belakang placeholderArray
+        placeholderArray.push ( secondArray.shift ) 
+    endwhile
+endfunction
+
+            
+
+        
+    
