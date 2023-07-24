@@ -2,4 +2,13 @@
     <string name="app_name">MobileProgramming</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_world">Hello World</string>
+    <string name="profile_preferences">ProfilePreferences</string>
+    <string name="profile_preferences_name">ProfilePreferences_Name</string>
+    <string name="avatar_url">https://cdn.discordapp.com/attachments/575701053912383489/1132721549670101103/download20200603000153.png</string>
+    <string name="week_five_button">Minggu 5</string>
+    <string name="week_seven_button">Minggu 7</string>
+    <string name="week_nine_button">Minggu 9</string>
+    <string name="week_ten_button">Minggu 10</string>
+    <string name="week_sixteen_button">Minggu 16</string>
 </resources>
