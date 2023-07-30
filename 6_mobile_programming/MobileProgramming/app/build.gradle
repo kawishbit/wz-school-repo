@@ -5,14 +5,15 @@ plugins {
 android {
     namespace 'com.example.mobileprogramming'
     compileSdk 33
-
+    viewBinding {
+        enabled = true
+    }
     defaultConfig {
         applicationId "com.example.mobileprogramming"
         minSdk 24
         targetSdk 33
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -29,10 +30,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.markormesher:android-fab:v2.5.0'
-    implementation 'androidx.fragment:fragment:1.6.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
@@ -40,4 +38,12 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:'
     implementation 'androidx.recyclerview:recyclerview-selection:1.1.0'
     implementation 'com.mikhaellopez:circularimageview:4.3.1'
+    implementation 'androidx.fragment:fragment:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.20"))
+    // CameraX core library using the latest version
+    def camerax_version = "1.1.0-alpha07"  // Always check for the latest version
+    implementation "androidx.camera:camera-camera2:$camerax_version"
+    implementation "androidx.camera:camera-lifecycle:$camerax_version"
+    implementation "androidx.camera:camera-view:1.0.0-alpha28"
 }

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
@@ -12,23 +13,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileProgramming"
         tools:targetApi="31">
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
         <activity
-            android:name=".SnapCameraActivity"
+            android:name=".activities.SnapCameraActivity"
             android:exported="false" />
         <activity
-            android:name=".EditProfileActivity"
+            android:name=".activities.PuzzleActivity"
             android:exported="false" />
         <activity
-            android:name=".PuzzleActivity"
+            android:name=".activities.SettingActivity"
             android:exported="false" />
         <activity
-            android:name=".SettingActivity"
+            android:name=".activities.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".ProfileActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FabLayoutActivity"
+            android:name=".activities.FabLayoutActivity"
+            android:launchMode="singleTop"
             android:exported="false" />
         <activity
             android:name=".activities.MainActivity"

@@ -7,12 +7,178 @@
     tools:context=".activities.FabLayoutActivity">
 
 
-    <uk.co.markormesher.android_fab.FloatingActionButton
-        android:id="@+id/fab"
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <View
+        android:id="@+id/transparentBg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#99111111"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fabConstraint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:buttonIcon="@drawable/ic_add"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:minHeight="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mainFabBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="@string/hello_world"
+            android:tint="@color/blue"
+            app:backgroundTint="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/baseline_dashboard_24"
+            app:tint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/homeFabBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:contentDescription="@string/hello_world"
+            android:tint="@color/grey"
+            android:visibility="invisible"
+            app:backgroundTint="@color/grey"
+            app:layout_constraintBottom_toTopOf="@id/mainFabBtn"
+            app:layout_constraintEnd_toEndOf="@id/mainFabBtn"
+            app:srcCompat="@drawable/baseline_home_24"
+            app:tint="@color/dark_grey" />
+
+        <TextView
+            android:id="@+id/homeFabTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/rounded_button"
+            android:elevation="8dp"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="8dp"
+            android:text="@string/home"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/homeFabBtn"
+            app:layout_constraintEnd_toStartOf="@id/homeFabBtn"
+            app:layout_constraintTop_toTopOf="@id/homeFabBtn" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/linearHFabBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/grey"
+            android:contentDescription="@string/hello_world"
+            android:tint="@color/grey"
+            android:visibility="invisible"
+            app:backgroundTint="@color/grey"
+            app:layout_constraintBottom_toTopOf="@id/homeFabBtn"
+            app:layout_constraintEnd_toEndOf="@id/homeFabBtn"
+            app:srcCompat="@drawable/baseline_play_circle_24"
+            app:tint="@color/dark_grey" />
+
+        <TextView
+            android:id="@+id/linearHFabTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/rounded_button"
+            android:elevation="8dp"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="8dp"
+            android:text="@string/linear_horizontal"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/linearHFabBtn"
+            app:layout_constraintEnd_toStartOf="@id/linearHFabBtn"
+            app:layout_constraintTop_toTopOf="@id/linearHFabBtn" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/linearVFabBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/grey"
+            android:contentDescription="@string/hello_world"
+            android:tint="@color/grey"
+            android:visibility="invisible"
+            app:backgroundTint="@color/grey"
+            app:layout_constraintBottom_toTopOf="@id/linearHFabBtn"
+            app:layout_constraintEnd_toEndOf="@id/linearHFabBtn"
+            app:srcCompat="@drawable/baseline_play_circle_24"
+            app:tint="@color/dark_grey" />
+
+        <TextView
+            android:id="@+id/linearVFabTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/rounded_button"
+            android:elevation="8dp"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="8dp"
+            android:text="@string/linear_vertical"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/linearVFabBtn"
+            app:layout_constraintEnd_toStartOf="@id/linearVFabBtn"
+            app:layout_constraintTop_toTopOf="@id/linearVFabBtn" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/relativeFabBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/grey"
+            android:contentDescription="@string/hello_world"
+            android:tint="@color/grey"
+            android:visibility="invisible"
+            app:backgroundTint="@color/grey"
+            app:layout_constraintBottom_toTopOf="@id/linearVFabBtn"
+            app:layout_constraintEnd_toEndOf="@id/linearVFabBtn"
+            app:srcCompat="@drawable/baseline_play_circle_24"
+            app:tint="@color/dark_grey" />
+
+        <TextView
+            android:id="@+id/relativeFabTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/rounded_button"
+            android:elevation="8dp"
+            android:paddingHorizontal="32dp"
+            android:paddingVertical="8dp"
+            android:text="@string/relative"
+            android:textColor="@color/dark_grey"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/relativeFabBtn"
+            app:layout_constraintEnd_toStartOf="@id/relativeFabBtn"
+            app:layout_constraintTop_toTopOf="@id/relativeFabBtn" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

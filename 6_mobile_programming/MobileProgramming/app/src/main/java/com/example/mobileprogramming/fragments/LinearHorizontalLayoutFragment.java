@@ -12,10 +12,10 @@ import com.example.mobileprogramming.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link LinearLayoutFragment#newInstance} factory method to
+ * Use the {@link LinearHorizontalLayoutFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LinearLayoutFragment extends Fragment {
+public class LinearHorizontalLayoutFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class LinearLayoutFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public LinearLayoutFragment() {
+    public LinearHorizontalLayoutFragment() {
         // Required empty public constructor
     }
 
@@ -39,8 +39,8 @@ public class LinearLayoutFragment extends Fragment {
      * @return A new instance of fragment LinearLayoutFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static LinearLayoutFragment newInstance(String param1, String param2) {
-        LinearLayoutFragment fragment = new LinearLayoutFragment();
+    public static LinearHorizontalLayoutFragment newInstance(String param1, String param2) {
+        LinearHorizontalLayoutFragment fragment = new LinearHorizontalLayoutFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class LinearLayoutFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_linear_layout, container, false);
+        return inflater.inflate(R.layout.fragment_linear_horizontal_layout, container, false);
     }
 }

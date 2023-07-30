@@ -11,4 +11,17 @@
     <string name="week_nine_button">Minggu 9</string>
     <string name="week_ten_button">Minggu 10</string>
     <string name="week_sixteen_button">Minggu 16</string>
+    <string name="proceed">Proceed</string>
+    <string name="home">Home</string>
+    <string name="linear_vertical">Linear V</string>
+    <string name="linear_horizontal">Linear H</string>
+    <string name="relative">Relative</string>
+    <string name="tile">tile</string>
+    <string name="stage_1">Stage 1</string>
+    <string name="stage_one_desc">Solve puzzle to get to the next stage!</string>
+    <string name="capture">Capture</string>
+    <string name="preview_area">Preview Area</string>
+    <string name="share_on_social_media">Share on Social Media</string>
+    <string name="share_on_facebook">Share on Facebook</string>
+    <string name="share_on_twitter">Share on Twitter</string>
 </resources>

@@ -4,6 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="20dp"
     tools:context=".activities.PuzzleActivity">
+
+    <TextView
+        android:id="@+id/stageOneText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stage_1"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:fontFamily="@font/roboto_black"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/dp_40"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/stageOneDesc"
+    />
+
+    <TextView
+        android:id="@+id/stageOneDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:paddingHorizontal="80dp"
+        android:text="@string/stage_one_desc"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/puzzleRecyclerView"
+        app:layout_constraintTop_toTopOf="@id/stageOneDesc"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/puzzleRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
