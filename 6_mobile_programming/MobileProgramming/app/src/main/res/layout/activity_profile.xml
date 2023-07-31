@@ -6,4 +6,268 @@
     android:layout_height="match_parent"
     tools:context=".activities.ProfileActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:paddingTop="40dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="40dp"
+            android:paddingVertical="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:elevation="2dp"
+                android:padding="20dp"
+                android:background="@drawable/rounded_button_blue">
+
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/mainAvatar"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginBottom="30dp"
+                    app:civ_circle_color="@color/border"
+                    android:contentDescription="@string/hello_world"
+                    android:src="@drawable/default_avatar"
+                    app:civ_border_color="@color/border"
+                    app:civ_border_width="3dp"
+                    app:civ_shadow="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@id/mainAvatar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:orientation="vertical"
+                    android:layout_marginStart="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+
+                    <TextView
+                        android:id="@+id/mainNameText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/hello_world"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/mainAvatar" />
+
+                    <TextView
+                        android:id="@+id/mainNimText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:text="@string/hello_world"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/mainNameText" />
+                </LinearLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/editProfileBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/hello_world"
+                    android:tint="@color/white"
+                    app:backgroundTint="@color/transparent"
+                    app:elevation="0dp"
+                    app:borderWidth="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:srcCompat="@drawable/baseline_edit_24"
+                    app:tint="@color/white" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:baselineAligned="false">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/lh_view_1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:id="@+id/postAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_black"
+                            android:text="@string/random_amount"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="30sp"
+                            android:layout_marginBottom="7dp"/>
+
+                        <TextView
+                            android:id="@+id/postTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="@string/posts"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/lh_view_2"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:id="@+id/followersAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_black"
+                            android:text="@string/random_amount_2"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="30sp"
+                            android:layout_marginBottom="7dp"/>
+
+                        <TextView
+                            android:id="@+id/followersTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="@string/followers"
+                            android:textColor="@color/dark_grey"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:backgroundTint="@color/transparent"
+                android:elevation="0dp"
+            />
+
+
+            <TextView
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/user_data"
+                android:layout_gravity="start"
+                android:textColor="@color/dark_grey"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/weekSevenButton"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/rounded_button"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/messages"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/settingsBtn"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/rounded_button"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/settings"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/weekTenButton"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/rounded_button"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/logout"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/profBackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/hello_world"
+        app:elevation="0dp"
+        app:borderWidth="0dp"
+        android:tint="@color/white"
+        app:backgroundTint="@color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_24"
+        app:tint="@color/dark_grey" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

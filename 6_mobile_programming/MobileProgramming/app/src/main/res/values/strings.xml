@@ -5,6 +5,7 @@
     <string name="hello_world">Hello World</string>
     <string name="profile_preferences">ProfilePreferences</string>
     <string name="profile_preferences_name">ProfilePreferences_Name</string>
+    <string name="profile_preferences_nim">ProfilePreferences_Nim</string>
     <string name="avatar_url">https://cdn.discordapp.com/attachments/575701053912383489/1132721549670101103/download20200603000153.png</string>
     <string name="week_five_button">Minggu 5</string>
     <string name="week_seven_button">Minggu 7</string>
@@ -24,4 +25,17 @@
     <string name="share_on_social_media">Share on Social Media</string>
     <string name="share_on_facebook">Share on Facebook</string>
     <string name="share_on_twitter">Share on Twitter</string>
+    <string name="settings">Settings</string>
+    <string name="messages">Messages</string>
+    <string name="logout">Logout</string>
+    <string name="random_amount">46</string>
+    <string name="random_amount_2">123</string>
+    <string name="posts">Posts</string>
+    <string name="followers">Followers</string>
+    <string name="name_placeholder">Your name here…</string>
+    <string name="nim_placeholder">Your nim here…</string>
+    <string name="user_data">User Data</string>
+    <string name="name">Name</string>
+    <string name="nim">NIM</string>
+    <string name="save_changes">Save Changes</string>
 </resources>
