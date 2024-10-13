@@ -1,0 +1,30 @@
+Accuracy: 0.163
+Accuracy for label A1: 0.280
+Accuracy for label A2: 0.075
+Accuracy for label B1: 0.160
+Accuracy for label B2: 0.110
+Accuracy for label C1: 0.240
+Accuracy for label C2: 0.110
+
+Classification Report:
+              precision    recall  f1-score   support
+
+          A1       0.15      0.28      0.19       200
+          A2       0.11      0.07      0.09       200
+          B1       0.21      0.16      0.18       200
+          B2       0.17      0.11      0.13       200
+          C1       0.18      0.24      0.21       200
+          C2       0.17      0.11      0.13       200
+
+    accuracy                           0.16      1200
+   macro avg       0.16      0.16      0.16      1200
+weighted avg       0.16      0.16      0.16      1200
+
+
+Confusion Matrix:
+[[56 22 30 26 33 33]
+ [69 15 18 19 54 25]
+ [61 23 32 21 43 20]
+ [71 29 24 22 36 18]
+ [67 22 30 20 48 13]
+ [57 24 19 24 54 22]]

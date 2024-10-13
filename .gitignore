@@ -68,3 +68,15 @@ hs_err_pid*
 **/artifacts
 **/out
 **/META-INF
+
+
+8_thesis/config.json
+
+.ipynb_checkpoints/
+wandb/
+8_thesis/experiment**/model/
+8_thesis/experiment**/result/
+8_thesis/experiment**/results/
+8_thesis/archived/experiment**/model/
+8_thesis/archived/experiment**/result/
+8_thesis/archived/experiment**/results/
